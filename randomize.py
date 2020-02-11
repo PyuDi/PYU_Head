@@ -59,4 +59,19 @@ def f_neko():
 	res =random.choice(randomize_resource.neko)
 	return ">>> **" + str(res) + "**"
 
-#todo : glitch filter
+def f_capso():
+	res =random.choice(randomize_resource.capso)
+	return ">>> **" + str(res) + "**"
+def f_bm():
+	res =random.choice(randomize_resource.bm)
+	return ">>> **" + str(res) + "**"
+
+def f_glitch():
+	res =random.choice(randomize_resource.glitch)
+	return ">>> **" + str(res) + "**"
+def f_xv():
+	res =random.choice(randomize_resource.xv)
+	return ">>> **" + str(res) + "**"
+def f_xiv():
+	res =random.choice(randomize_resource.xiv)
+	return ">>> **" + str(res) + "**"

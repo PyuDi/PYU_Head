@@ -32,17 +32,15 @@ bot = commands.Bot(
 
 # case_insensitive=True is used as the commands are case sensitive by default
 
-# cogs = ['cogs.basic','cogs.embed']
-cogs = []
+cogs = ['cogs.basic','cogs.embed']
+# cogs = []
 
 
 @bot.event
 async def on_ready():
 		replit.clear()
 		print(f'Logged in as {bot.user.name} - {bot.user.id}')
-    # bot.remove_command('help')
-    # Removes the help command
-    # Make sure to do this before loading the cogs
+		bot.remove_command('help')
 		for cog in cogs:
 				bot.load_extension(cog)
 		activity = discord.Game(name="& Waiting for ??helpme")
@@ -79,7 +77,7 @@ async def c(ctx, p, g, b, m, tp):
 @bot.command()
 async def rhelp(ctx):
 		title = "List of Commands"
-		res = "**all / free** \n paff / neko / robo / ivy / cp \n miku / xenon / conner / cherry / joe / rin / sagar \n aroma / nora / nekopunk"
+		res = "**all / free** / bm / capso \n paff / neko / robo / ivy / cp \n miku / xenon / conner / cherry / joe / rin / sagar \n aroma / nora / nekopunk \n **glitch / 15 / 14**"
 		embed = discord.Embed(title="??rhelp", description="Cytus 2 Song Randomizer HELP", color=0x81ccc4)
 		embed.add_field(name=title, value=res, inline=False)
 		await ctx.channel.send(embed=embed)
@@ -126,17 +124,29 @@ async def r(ctx,selection):
 		elif (str(selection)=="nekopunk"):
 			res = randomize.f_neko()
 
-		embed = discord.Embed(title="??r", description="Cytus 2 Song Randomizer", color=0x81ccc4)
+		elif (str(selection)=="capso"):
+			res = randomize.f_capso()
+		elif (str(selection)=="bm"):
+			res = randomize.f_bm()
+
+		elif (str(selection)=="glitch"):
+			res = randomize.f_glitch()
+		elif (str(selection)=="15"):
+			res = randomize.f_xv()
+		elif (str(selection)=="14"):
+			res = randomize.f_xiv()
+
+		embed = discord.Embed(title="??r "+str(selection), description="Cytus 2 Song Randomizer", color=0x81ccc4)
 		embed.add_field(name=title, value=res, inline=False)
 		await ctx.channel.send(embed=embed)
 
 @bot.command()
 async def about(ctx):
-		embed = discord.Embed(title="PYU_Head V2.0", description="made by H8v_PyuDi#7059", color=0xcccccc)
+		embed = discord.Embed(title="PYU_Head V2.1", description="made by H8v_PyuDi#7059", color=0xcccccc)
 		embed.add_field(name="Info", value="Last Updated : 200210 \nSongs : up to v2.8.5 \n\nPM H8v_PyuDi#7059 for Bot Invite Link", inline=False)
 		await ctx.channel.send(embed=embed)
 
-
+# https://discordapp.com/oauth2/authorize?scope=bot&client_id=676146100721156096
 ####################
 
 # Start the server
