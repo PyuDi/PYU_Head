@@ -1,7 +1,6 @@
 from discord.ext import commands
 from datetime import datetime as d
 import discord
-import random
 
 
 class Tools(commands.Cog):
@@ -16,7 +15,7 @@ class Tools(commands.Cog):
 		aliases=['p']
 	)
 	async def ping_command(self, ctx):
-		dtart = d.timestamp(d.now())
+		start = d.timestamp(d.now())
 
 		msg = await ctx.send(content='Pinging')
 		await msg.edit(content=f'Pong!\nOne message round-trip took {(d.timestamp(d.now())-start) * 1000}ms.')
