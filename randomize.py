@@ -108,7 +108,7 @@ def rand(selection):
 		"14" : f_xiv(),
 		
 		# lmao
-		"graff" : "CAPSO isn't \*FREE\* :confused:",
-		"graffj" : "CAPSO isn't \*FREE\* :confused:"
+		"graff" : "> CAPSO isn't **\*FREE\*** :confused:",
+		"graffj" : "> CAPSO isn't **\*FREE\*** :confused:"
 	}
 	return switcher.get(selection, "*Check your input* :thinking:")

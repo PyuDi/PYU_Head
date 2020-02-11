@@ -5,10 +5,6 @@ import os
 import replit
 import discord
 
-###########
-from calc import calc
-import randomize
-###########
 
 
 def get_prefix(client, message):
