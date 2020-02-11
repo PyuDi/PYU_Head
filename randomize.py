@@ -105,6 +105,10 @@ def rand(selection):
 
 		"glitch" : f_glitch(),
 		"15" : f_xv(),
-		"14" : f_xiv()
+		"14" : f_xiv(),
+		
+		# lmao
+		"graff" : "> CAPSO isn't **\*FREE\*** :confused:",
+		"graffj" : "> CAPSO isn't **\*FREE\*** :confused:"
 	}
 	return switcher.get(selection, "*Check your input* :thinking:")
