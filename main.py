@@ -86,9 +86,9 @@ async def rhelp(ctx):
 async def r(ctx,selection):
 		title = "Result"
 		res = randomize.rand(selection)
-		if (res==None):
+		''' if (res==None):
 			title = "Error"
-			res = "*Check your input* :thinking:"
+			res = "*Check your input* :thinking:" '''
 
 		embed = discord.Embed(title="??r "+str(selection), description="", color=0x81ccc4)
 		embed.add_field(name=title, value=res, inline=False)

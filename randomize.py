@@ -79,52 +79,32 @@ def f_xiv():
 ###
 
 def rand(selection):
-		if (str(selection)=="all"):
-			return f_allchar()
-		elif (str(selection)=="free"):
-			return f_free()
-		
-		elif (str(selection)=="paff"):
-			return f_paff()
-		elif (str(selection)=="neko"):
-			return f_nekow()
-		elif (str(selection)=="robo"):
-			return f_robohead()
-		elif (str(selection)=="ivy"):
-			return f_ivy()
-		elif (str(selection)=="cp"):
-			return f_cp()
+	switcher = {
+		"all" : f_allchar(),
+		"free" : f_free(),
+		"paff" : f_paff(),
+		"neko" : f_nekow(),
+		"robo" : f_robohead(),
+		"ivy" : f_ivy(),
+		"cp" : f_cp(),
 
-		elif (str(selection)=="miku"):
-			return f_miku()
-		elif (str(selection)=="xenon"):
-			return f_xenon()
-		elif (str(selection)=="conner"):
-			return f_conner()
-		elif (str(selection)=="cherry"):
-			return f_cherry()
-		elif (str(selection)=="joe"):
-			return f_joe()
-		elif (str(selection)=="sagar"):
-			return f_sagar()
-		elif (str(selection)=="rin"):
-			return f_rin()
+		"miku" : f_miku(),
+		"xenon" : f_xenon(),
+		"conner" : f_conner(),
+		"cherry" : f_cherry(),
+		"joe" : f_joe(),
+		"sagar" : f_sagar(),
+		"rin" : f_rin(),
 
-		elif (str(selection)=="aroma"):
-			return f_aroma()
-		elif (str(selection)=="nora"):
-			return f_nora()
-		elif (str(selection)=="nekopunk"):
-			return f_neko()
+		"aroma" : f_aroma(),
+		"nora" : f_nora(),
+		"nekopunk" : f_neko(),
 
-		elif (str(selection)=="capso"):
-			return f_capso()
-		elif (str(selection)=="bm"):
-			return f_bm()
+		"capso" : f_capso(),
+		"bm" : f_bm(),
 
-		elif (str(selection)=="glitch"):
-			return f_glitch()
-		elif (str(selection)=="15"):
-			return f_xv()
-		elif (str(selection)=="14"):
-			return f_xiv()
+		"glitch" : f_glitch(),
+		"15" : f_xv(),
+		"14" : f_xiv()
+	}
+	return switcher.get(selection, "*Check your input* :thinking:")
