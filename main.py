@@ -86,55 +86,7 @@ async def rhelp(ctx):
 async def r(ctx,selection):
 		res = ""
 		title = "Result"
-		if (str(selection)=="all"):
-			res = randomize.f_allchar()
-		elif (str(selection)=="free"):
-			res = randomize.f_free()
-		
-		elif (str(selection)=="paff"):
-			res = randomize.f_paff()
-		elif (str(selection)=="neko"):
-			res = randomize.f_nekow()
-		elif (str(selection)=="robo"):
-			res = randomize.f_robohead()
-		elif (str(selection)=="ivy"):
-			res = randomize.f_ivy()
-		elif (str(selection)=="cp"):
-			res = randomize.f_cp()
-
-		elif (str(selection)=="miku"):
-			res = randomize.f_miku()
-		elif (str(selection)=="xenon"):
-			res = randomize.f_xenon()
-		elif (str(selection)=="conner"):
-			res = randomize.f_conner()
-		elif (str(selection)=="cherry"):
-			res = randomize.f_cherry()
-		elif (str(selection)=="joe"):
-			res = randomize.f_joe()
-		elif (str(selection)=="sagar"):
-			res = randomize.f_sagar()
-		elif (str(selection)=="rin"):
-			res = randomize.f_rin()
-
-		elif (str(selection)=="aroma"):
-			res = randomize.f_aroma()
-		elif (str(selection)=="nora"):
-			res = randomize.f_nora()
-		elif (str(selection)=="nekopunk"):
-			res = randomize.f_neko()
-
-		elif (str(selection)=="capso"):
-			res = randomize.f_capso()
-		elif (str(selection)=="bm"):
-			res = randomize.f_bm()
-
-		elif (str(selection)=="glitch"):
-			res = randomize.f_glitch()
-		elif (str(selection)=="15"):
-			res = randomize.f_xv()
-		elif (str(selection)=="14"):
-			res = randomize.f_xiv()
+		res = randomize.rand(selection)
 
 		embed = discord.Embed(title="??r "+str(selection), description="Cytus 2 Song Randomizer", color=0x81ccc4)
 		embed.add_field(name=title, value=res, inline=False)
