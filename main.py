@@ -70,7 +70,6 @@ async def chelp(ctx):
 @bot.command()
 async def c(ctx, p, g, b, m, tp):
 		res = calc(p, g, b, m, tp)
-		# embed = discord.Embed(title="??c", description="Cytus TP Calculator", color=0xccc481)
 		embed = discord.Embed(title="??c"+" "+p+" "+g+" "+b+" "+m+" "+tp, description="", color=0xccc481)
 		embed.add_field(name="Result", value=res, inline=False)
 		await ctx.channel.send(embed=embed)
@@ -85,11 +84,12 @@ async def rhelp(ctx):
 
 @bot.command()
 async def r(ctx,selection):
-		res = ""
 		title = "Result"
 		res = randomize.rand(selection)
+		if (res==None):
+			title = "Error"
+			res = "*Check your input* :thinking:"
 
-		# embed = discord.Embed(title="??r "+str(selection), description="Cytus 2 Song Randomizer", color=0x81ccc4)
 		embed = discord.Embed(title="??r "+str(selection), description="", color=0x81ccc4)
 		embed.add_field(name=title, value=res, inline=False)
 		await ctx.channel.send(embed=embed)
