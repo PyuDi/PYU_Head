@@ -26,7 +26,7 @@ bot = commands.Bot(
 	# Set a description for the bot
   owner_id=408795307296423942,
 	# Your unique User ID
-  case_insensitive=False
+  case_insensitive=True
 	# Make the commands case insensitive
 )
 
