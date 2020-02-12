@@ -36,7 +36,7 @@ class Cytus(commands.Cog):
 		aliases=['rand','randomize'],
 		usage='[all/free/bm/capso / paff/neko/robo/ivy/cp / miku/xenon/conner/cherry/joe/rin/sagar/aroma/nora/nekopunk / glitch / 15 / 14]'
   )
-	async def r(self, ctx, selection):
+	async def r(self, ctx, selection="all"):
 		title = "Result"
 		res = randomize.rand(selection)
 		if (selection=="graff" or selection=="graffj"):

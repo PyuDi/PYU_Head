@@ -41,8 +41,8 @@ class Tools(commands.Cog):
 	@commands.command(
         name='help',
         description='The help command!',
-        aliases=['commands', 'command'],
-        usage='cog'
+        aliases=['h', 'commands', 'command'],
+        usage='[cog]'
   )
 	async def help_command(self, ctx, cog='all'):
         
