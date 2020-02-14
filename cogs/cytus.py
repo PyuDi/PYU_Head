@@ -18,10 +18,10 @@ class Cytus(commands.Cog):
   )
 	async def c(self, ctx, p, g, b, m, tp):
 		res = calc(p, g, b, m, tp)
-		embed = discord.Embed(title="??c"+" "+p+" "+g+" "+b+" "+m+" "+tp, description="", color=0xccc481)
+		embed = discord.Embed(title="?c"+" "+p+" "+g+" "+b+" "+m+" "+tp, description="", color=0xccc481)
 		embed.set_footer(
       text=f'Requested by {ctx.message.author.name}',
-      icon_url=self.bot.user.avatar_url
+      icon_url=ctx.message.author.avatar_url
     )
 		embed.add_field(name="Result", value=res, inline=False)
 		await ctx.send(embed=embed)
@@ -42,10 +42,10 @@ class Cytus(commands.Cog):
 		if (selection=="graff" or selection=="graffj"):
 			title = "Well,"
 
-		embed = discord.Embed(title="??r "+str(selection), description="", color=0x81ccc4)
+		embed = discord.Embed(title="?r "+str(selection), description="", color=0x81ccc4)
 		embed.set_footer(
       text=f'Requested by {ctx.message.author.name}',
-      icon_url=self.bot.user.avatar_url
+      icon_url=ctx.message.author.avatar_url
     )
 		embed.add_field(name=title, value=res, inline=False)
 		await ctx.send(embed=embed)

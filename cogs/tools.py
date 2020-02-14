@@ -30,9 +30,10 @@ class Tools(commands.Cog):
 	async def about(self, ctx):
 		embed = discord.Embed(title="PYU_Head V2.2", description="made by H8v_PyuDi#7059", color=0xcccccc)
 		embed.add_field(name="Info", value="Last Updated : 200211 \nSongs : up to v2.8.5 \n [Check out what I'm made of!](https://github.com/PyuDi/PYU_Head) \n\nPM H8v_PyuDi#7059 for Bot Invitation", inline=False)
+		embed.set_thumbnail(url=self.bot.user.avatar_url)
 		embed.set_footer(
       text=f'Requested by {ctx.message.author.name}',
-      icon_url=self.bot.user.avatar_url
+      icon_url=ctx.message.author.avatar_url
     )
 		await ctx.channel.send(embed=embed)
 
@@ -55,11 +56,11 @@ class Tools(commands.Cog):
 			title='Help',
  			color=0xcccccc
 		)
-		#help_embed.set_thumbnail(url=self.bot.user.avatar_url)
+		help_embed.set_thumbnail(url=self.bot.user.avatar_url)
 		help_embed.set_footer(
-			text=f'Requested by {ctx.message.author.name}',
-			icon_url=self.bot.user.avatar_url
-		)
+      text=f'Requested by {ctx.message.author.name}',
+      icon_url=ctx.message.author.avatar_url
+    )
 
     # Get a list of all cogs
 		cogs = [c for c in self.bot.cogs.keys()]
@@ -104,7 +105,7 @@ class Tools(commands.Cog):
       	#
 				# Format
 				for command in commands_list:
-					help_text += f'```??{command.name}```\n' \
+					help_text += f'```?{command.name}```\n' \
   			    f'**{command.description}**\n\n'
 
           # Also add aliases, if there are any
@@ -116,7 +117,7 @@ class Tools(commands.Cog):
 						help_text += '\n'
 
           # Finally the format
-					help_text += f'Format: \n`??' \
+					help_text += f'Format: \n`?' \
   			    f'{command.name} {command.usage if command.usage is not None else ""}`\n\n\n\n'
 
 					help_embed.description = help_text

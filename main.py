@@ -9,10 +9,10 @@ import discord
 
 def get_prefix(client, message):
 
-    prefixes = ['??']    # sets the prefixes, u can keep it as an array of only 1 item if you need only one prefix
+    prefixes = ['?']    # sets the prefixes, u can keep it as an array of only 1 item if you need only one prefix
 
     if not message.guild:
-        prefixes = ['??']   # Only allow '==' as a prefix when in DMs
+        prefixes = ['?']   # Only allow '?' as a prefix when in DMs
 
     # Allow users to @mention the bot instead of using a prefix when using a command.
     return commands.when_mentioned_or(*prefixes)(client, message)
@@ -43,7 +43,7 @@ async def on_ready():
 	bot.remove_command('help')
 	for cog in cogs:
 		bot.load_extension(cog)
-	activity = discord.Game(name="& Waiting for ??help")
+	activity = discord.Game(name="& Waiting for ?help")
 	await bot.change_presence(status=discord.Status.online,activity=activity)
 	return
 
