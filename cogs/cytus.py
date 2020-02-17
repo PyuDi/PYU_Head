@@ -4,6 +4,7 @@ import discord
 from calc import calc
 import randomize
 import search
+import re
 
 class Cytus(commands.Cog):
     
