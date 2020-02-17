@@ -42,7 +42,7 @@ async def on_ready():
 	bot.remove_command('help')
 	for cog in cogs:
 		bot.load_extension(cog)
-	activity = discord.Game(name="& Waiting for ?help")
+	activity = discord.Game(name="Cytus II & Waiting ?help")
 	await bot.change_presence(status=discord.Status.online,activity=activity)
 	return
 
