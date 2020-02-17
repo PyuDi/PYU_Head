@@ -33,7 +33,6 @@ bot = commands.Bot(
 # case_insensitive=True is used as the commands are case sensitive by default
 
 cogs = ['cogs.cytus','cogs.tools']
-# cogs = []
 
 
 @bot.event
