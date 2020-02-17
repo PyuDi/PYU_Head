@@ -62,26 +62,37 @@ class Cytus(commands.Cog):
 	merged_dict = search.merge_keys_and_links(table)
 	merged_df = search.get_merged_df(charts_df, merged_dict)
 
-	@commands.command()
-	async def s(self, message, *, arg):
+	@commands.command(
+		name='s',
+		description='Searches Song Charts from ct2view :heart:',
+		aliases=['search','find'],
+		usage='[song name]'
+
+	)
+	async def s(self, ctx, *, arg):
 		"""
     	Searches ct2viewer for a song that matches closest to the user input.
     	Returns an embed containing the song information and links to its charts.
     	"""
-		channel = message.channel
+		channel = ctx.channel
 
 		is_emote = re.search(search.emoteregex, arg) is not None
 		is_ping = re.search(search.pingregex, arg) is not None
 
 		if is_emote or is_ping:
 			embed = discord.Embed(title = 'Error', color = 0x992d22,
-                            description = 'Invalid input. Emote, ping, or channel name detected.')
+                description = 'Invalid input. Emote, ping, or channel name detected.')
 
 			await channel.send(embed = embed)
 			return
 
 		result = search.search_song(Cytus.merged_df, arg)
 		embed = search.process_search(Cytus.merged_dict, result)
+		embed.set_footer(
+    		text=f'Requested by {ctx.message.author.name}',
+    		icon_url=ctx.message.author.avatar_url
+    	)
+
 
 		await channel.send(embed = embed)
 
@@ -92,7 +103,11 @@ class Cytus(commands.Cog):
 		"""
 		if isinstance(error, commands.MissingRequiredArgument):
 			embed = discord.Embed(title = 'Error', color = 0x992d22,
-                            description = "Please also specify a search key.")
+                description = "Please also specify a search key.")
+			embed.set_footer(
+    			text=f'Requested by {ctx.message.author.name}',
+    			icon_url=ctx.message.author.avatar_url
+    		)
     
 			await ctx.send(embed = embed)
 
