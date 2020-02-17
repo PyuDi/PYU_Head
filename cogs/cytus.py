@@ -3,7 +3,6 @@ from discord.ext import commands
 import discord
 from calc import calc
 import randomize
-import search
 
 class Cytus(commands.Cog):
     
@@ -52,49 +51,6 @@ class Cytus(commands.Cog):
 		await ctx.send(embed=embed)
 
 		return
-	
-	###
-
-	# initializing dataframe used for searching songs and dictionary for storing links
-	table = search.get_table(search.source)
-	charts_df = search.get_initial_df(search.source)
-
-	merged_dict = search.merge_keys_and_links(table)
-	merged_df = search.get_merged_df(charts_df, merged_dict)
-
-	@commands.command()
-	async def s(message, *, arg):
-		"""
-    	Searches ct2viewer for a song that matches closest to the user input.
-    	Returns an embed containing the song information and links to its charts.
-    	"""
-		channel = message.channel
-
-		is_emote = re.search(search.emoteregex, arg) is not None
-		is_ping = re.search(search.pingregex, arg) is not None
-
-		if is_emote or is_ping:
-			embed = discord.Embed(title = 'Error', color = 0x992d22,
-                            description = 'Invalid input. Emote, ping, or channel name detected.')
-
-			await channel.send(embed = embed)
-			return
-
-		result = search.search_song(merged_df, arg)
-		embed = search.process_search(merged_dict, result)
-
-		await channel.send(embed = embed)
-
-	@s.error 
-	async def s_error(ctx, error):
-		"""
-		Error handler in case user forgets to specify the search key.
-		"""
-		if isinstance(error, commands.MissingRequiredArgument):
-			embed = discord.Embed(title = 'Error', color = 0x992d22,
-                            description = "Please also specify a search key.")
-    
-			await ctx.send(embed = embed)
 
 
 def setup(bot):
