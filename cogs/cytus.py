@@ -16,7 +16,7 @@ class Cytus(commands.Cog):
 		aliases=['calc','calculate'],
 		usage='[perfect] [good] [bad] [miss] [tp]'
   )
-	async def c(self, ctx, p, g, b, m, tp):
+	async def c(self, ctx, p="0", g="0", b="0", m="0", tp="0.0"):
 		res = calc(p, g, b, m, tp)
 		embed = discord.Embed(title="?c"+" "+p+" "+g+" "+b+" "+m+" "+tp, description="", color=0xccc481)
 		embed.set_footer(
