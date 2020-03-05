@@ -10,6 +10,8 @@ def calc(p, g, b, m, tp):
 
 	if (p==0 and g==0 and b==0 and m==0 and tp==0.0):
 		return "> No input detected. Type `?h cytus` for help :pensive:"
+	elif (p<0 or g<0 or b<0 or m<0 or tp<0.0):
+		return "You are negative :expressionless:"
 	elif (res==1):
 		return ">>> There were ONLY **" + str(res) + "** Lemon Perfect :sweat: \nYou can do it :mechanical_arm:"
 	elif (res<0):

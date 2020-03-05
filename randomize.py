@@ -75,13 +75,33 @@ def f_xv():
 def f_xiv():
 	res =random.choice(randomize_resource.xiv)
 	return ">>> **" + str(res) + "**"
+def f_xiii():
+	res =random.choice(randomize_resource.xiii)
+	return ">>> **" + str(res) + "**"
+def f_xii():
+	res =random.choice(randomize_resource.xii)
+	return ">>> **" + str(res) + "**"
+def f_xi():
+	res =random.choice(randomize_resource.xi)
+	return ">>> **" + str(res) + "**"
+def f_x():
+	res =random.choice(randomize_resource.x)
+	return ">>> **" + str(res) + "**"
+def f_ix():
+	res =random.choice(randomize_resource.ix)
+	return ">>> **" + str(res) + "**"
+def f_viii():
+	res =random.choice(randomize_resource.viii)
+	return ">>> **" + str(res) + "**"
 
 ###
 
 def rand(selection):
 	switcher = {
 		"all" : f_allchar(),
+		"a" : f_allchar(),
 		"free" : f_free(),
+		"f" : f_free(),
 		"paff" : f_paff(),
 		"neko" : f_nekow(),
 		"robo" : f_robohead(),
@@ -106,6 +126,12 @@ def rand(selection):
 		"glitch" : f_glitch(),
 		"15" : f_xv(),
 		"14" : f_xiv(),
+		"13" : f_xiii(),
+		"12" : f_xii(),
+		"11" : f_xi(),
+		"10" : f_x(),
+		"9" : f_ix(),
+		"8" : f_viii(),
 		
 		# lmao
 		"graff" : "> CAPSO isn't **\*FREE\*** :confused:",
