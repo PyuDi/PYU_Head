@@ -28,8 +28,8 @@ class Tools(commands.Cog):
 		aliases=['a','ab']
 	)
 	async def about(self, ctx):
-		embed = discord.Embed(title="PYU_Head V3", description="made by H8v_PyuDi#7059 & Veins#1734", color=0xcccccc)
-		embed.add_field(name="Info", value="Last Updated : 200217 \nSongs : up to v2.8.5 \n [Check out what I'm made of!](https://github.com/PyuDi/PYU_Head) \n\nPM H8v_PyuDi#7059 for Bot Invitation", inline=False)
+		embed = discord.Embed(title="TP99.99_Head V3", description="made by H8v_PyuDi#7059 & Veins#1734", color=0xcccccc)
+		embed.add_field(name="Info", value="Last Updated : 200217 \nSongs : up to v2.8.5 \n [Check out what I'm made of!](https://github.com/PyuDi/TP99.99_Head) \n\nPM H8v_PyuDi#7059 for Bot Invitation", inline=False)
 		embed.set_thumbnail(url=self.bot.user.avatar_url)
 		embed.set_footer(
     		text=f'Requested by {ctx.message.author.name}',

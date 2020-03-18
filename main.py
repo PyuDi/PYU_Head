@@ -9,20 +9,20 @@ import discord
 
 def get_prefix(client, message):
 
-    prefixes = ['?', ',']    # sets the prefixes, u can keep it as an array of only 1 item if you need only one prefix
+  prefixes = ['?', ',']    # sets the prefixes, u can keep it as an array of only 1 item if you need only one prefix
 
-    if not message.guild:
-        prefixes = ['?']   # Only allow '?' as a prefix when in DMs
+  if not message.guild:
+    prefixes = ['?']   # Only allow '?' as a prefix when in DMs
 
-    # Allow users to @mention the bot instead of using a prefix when using a command.
-    return commands.when_mentioned_or(*prefixes)(client, message)
+  # Allow users to @mention the bot instead of using a prefix when using a command.
+  return commands.when_mentioned_or(*prefixes)(client, message)
 
 
 bot = commands.Bot(                                         
   # Create a new bot
   command_prefix=get_prefix,
 	# Set the prefix
-  description='PYU_Head',
+  description='TP99.99_Head',
 	# Set a description for the bot
   owner_id=408795307296423942,
 	# Your unique User ID
