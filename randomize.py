@@ -26,6 +26,9 @@ def f_ivy():
 def f_cp():
 	res =random.choice(randomize_resource.cp)
 	return ">>> **" + str(res) + "**"
+def f_vanessa():
+	res =random.choice(randomize_resource.vanessa)
+	return ">>> **" + str(res) + "**"
 	
 def f_miku():
 	res =random.choice(randomize_resource.miku)
@@ -107,6 +110,7 @@ def rand(selection):
 		"robo" : f_robohead(),
 		"ivy" : f_ivy(),
 		"cp" : f_cp(),
+		"vanessa" : f_vanessa(),
 
 		"miku" : f_miku(),
 		"xenon" : f_xenon(),

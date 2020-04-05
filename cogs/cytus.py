@@ -56,7 +56,7 @@ class Cytus(commands.Cog):
 	###
 
 	# initializing dataframe used for searching songs and dictionary for storing links
-	table = search.get_table(search.source)
+	''' table = search.get_table(search.source)
 	charts_df = search.get_initial_df(search.source)
 
 	merged_dict = search.merge_keys_and_links(table)
@@ -111,7 +111,7 @@ class Cytus(commands.Cog):
     
 			await ctx.send(embed = embed)
 
-			return
+			return '''
 
 
 def setup(bot):
