@@ -3,13 +3,14 @@
 authors = ["Your Name <you@example.com>"]
 name = "root"
 version = "0.0.0"
+description = "00"
 [tool.poetry.dependencies]
+bs4 = "^0.0.1"
 "discord.py" = "*"
 flask = "*"
-python = "^3.7"
-replit = "*"
 fuzzywuzzy = "^0.18.0"
+lxml = "^4.5"
 pandas = "^1.0"
 pykakasi = "^1.2"
-bs4 = "^0.0.1"
-lxml = "^4.5"
+python = "^3.8"
+replit = "*"

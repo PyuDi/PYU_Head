@@ -52,6 +52,10 @@ async def on_ready():
 async def test(ctx):
   await ctx.send(">>> YAMAMETO!")
 
+@bot.command()
+async def wave(ctx):
+  await ctx.send(">>> :wave:")
+
 # https://discordapp.com/oauth2/authorize?scope=bot&client_id=676146100721156096
 ####################
 

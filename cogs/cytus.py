@@ -36,7 +36,7 @@ class Cytus(commands.Cog):
 		name='r',
 		description='Randomizes Cytus 2 songs :game_die:',
 		aliases=['rand','randomize'],
-		usage='[all/free/bm/capso / paff/neko/robo/ivy/cp / miku/xenon/conner/cherry/joe/rin/sagar/aroma/nora/nekopunk / glitch / 15 / 14]'
+		usage='[all/free/bm/capso / paff/neko/robo/ivy/cp/vanessa / miku/xenon/conner/cherry/joe/rin/sagar/aroma/nora/nekopunk / glitch / 15 / 14]'
 	)
 	async def r(self, ctx, selection="all"):
 		title = "Result"
