@@ -108,6 +108,7 @@ def rand(selection):
 		"a" : f_allchar(),
 		"free" : f_free(),
 		"f" : f_free(),
+		
 		"paff" : f_paff(),
 		"neko" : f_nekow(),
 		"robo" : f_robohead(),
@@ -129,9 +130,12 @@ def rand(selection):
 		"nekopunk" : f_neko(),
 
 		"capso" : f_capso(),
+		"c" : f_capso(),
 		"bm" : f_bm(),
+		"b" : f_bm(),
 
 		"glitch" : f_glitch(),
+		"g" : f_glitch(),
 		"15" : f_xv(),
 		"14" : f_xiv(),
 		"13" : f_xiii(),
