@@ -33,6 +33,9 @@ def f_vanessa():
 def f_miku():
 	res =random.choice(randomize_resource.miku)
 	return ">>> **" + str(res) + "**"
+def f_ai():
+	res =random.choice(randomize_resource.ai)
+	return ">>> **" + str(res) + "**"
 def f_xenon():
 	res =random.choice(randomize_resource.xenon)
 	return ">>> **" + str(res) + "**"
@@ -113,6 +116,7 @@ def rand(selection):
 		"vanessa" : f_vanessa(),
 
 		"miku" : f_miku(),
+		"ai" : f_ai(),
 		"xenon" : f_xenon(),
 		"conner" : f_conner(),
 		"cherry" : f_cherry(),
