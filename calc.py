@@ -13,7 +13,7 @@ def calc(p, g, b, m, tp):
 	elif (p<0 or g<0 or b<0 or m<0 or tp<0.0):
 		return "You are negative :expressionless:"
 	elif (res==1):
-		return ">>> There were ONLY **" + str(res) + "** Lemon Perfect :sweat: \nYou can do it :mechanical_arm:"
+		return ">>> There were ONLY **" + str(res) + "** Lemon Perfect :sweat:"
 	elif (res<0):
 		return "> Are you SURE? Check the input :thinking:"
 	elif (res==0 and int(tp)==100):

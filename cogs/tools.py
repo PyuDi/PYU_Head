@@ -29,7 +29,7 @@ class Tools(commands.Cog):
 	)
 	async def about(self, ctx):
 		embed = discord.Embed(title="TP99.99_Head V3", description="made by is_pyu_#7059 & Veins#1734", color=0xcccccc)
-		embed.add_field(name="Info", value="Last Updated : 200511 \nSongs : up to v3.0 \n [Check out what I'm made of!](https://github.com/PyuDi/TP99.99_Head) \n\nDM is_pyu_#7059 for Bot Invitation", inline=False)
+		embed.add_field(name="Info", value="Last Updated : 200922 \nSongs : up to v3.4.5 \n [Code](https://github.com/PyuDi/TP99.99_Head) \n\nJoin https://discord.gg/yaNU6jm for Bot Invitation", inline=False)
 		embed.set_thumbnail(url=self.bot.user.avatar_url)
 		embed.set_footer(
     		text=f'Requested by {ctx.message.author.name}',

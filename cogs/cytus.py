@@ -36,7 +36,7 @@ class Cytus(commands.Cog):
 		name='r',
 		description='Randomizes Cytus 2 songs :game_die:',
 		aliases=['rand','randomize'],
-		usage='[all/free/bm/capso / paff/neko/robo/ivy/cp/vanessa / miku/xenon/conner/cherry/joe/rin/sagar/aroma/nora/nekopunk / glitch / 15 / 14]'
+		usage='[all(a)/free(f)/bm(b)/capso(c) / paff/neko/robo/ivy/cp/vanessa/bobo / miku/ai/alice / xenon/conner/cherry/joe/rin/sagar / aroma/nora/nekopunk / glitch(g) / 15/14/.../9/8]'
 	)
 	async def r(self, ctx, selection="all"):
 		title = "Result"
@@ -71,9 +71,9 @@ class Cytus(commands.Cog):
 	)
 	async def s(self, ctx, *, arg):
 		"""
-    	Searches ct2viewer for a song that matches closest to the user input.
-    	Returns an embed containing the song information and links to its charts.
-    	"""
+    Searches ct2viewer for a song that matches closest to the user input.
+    Returns an embed containing the song information and links to its charts.
+    """
 		channel = ctx.channel
 
 		is_emote = re.search(search.emoteregex, arg) is not None
