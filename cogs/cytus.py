@@ -54,7 +54,7 @@ class Cytus(commands.Cog):
 		return
 	
 	###
-
+'''
 	# initializing dataframe used for searching songs and dictionary for storing links
 	table = search.get_table(search.source)
 	charts_df = search.get_initial_df(search.source)
@@ -112,7 +112,7 @@ class Cytus(commands.Cog):
 			await ctx.send(embed = embed)
 
 			return
-
+'''
 
 def setup(bot):
     bot.add_cog(Cytus(bot))

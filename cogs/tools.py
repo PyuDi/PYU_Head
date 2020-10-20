@@ -41,7 +41,7 @@ class Tools(commands.Cog):
 	
 	@commands.command(
         name='help',
-        description='The help command!',
+        description='The help command! ?h cytus / ?h tools for more',
         aliases=['h', 'commands', 'command'],
         usage='[cog]'
   )
